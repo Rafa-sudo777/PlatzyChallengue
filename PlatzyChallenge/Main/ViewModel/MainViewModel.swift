@@ -8,7 +8,7 @@
 import Foundation
 
 final class ListViewModel: ObservableObject {
-    @Published var books: [Book] = []
+    @Published var books: [BookModel] = []
     private let networkLayer = NetworkLayer()
     
     init () {
