@@ -9,8 +9,10 @@ import SwiftUI
 import AVKit
 
 struct DetailView: View {
-    @ObservedObject var viewModel = DetailViewModel()
+    @State var viewModel = DetailViewModel()
+    @State private var showToast = false
     @EnvironmentObject var networkMonitor: NetworkMonitor
+    @State private var toastMessage = ""
     private var book: BookModel!
     private var index = String()
     
@@ -86,9 +88,27 @@ struct DetailView: View {
                 }
             }
         }
-        .onAppear(perform: {
-            viewModel.fetchCharacters(index: index)
-        })
-        //.environmentObject(networkMonitor)
+        .toast(message: toastMessage,
+               isShowing: $showToast,
+               duration: Toast.long)
+        .onChange(of: networkMonitor.status) { status in
+            switch status {
+                case .wifi:
+                    toastMessage = "Connected over Wifi"
+                case .cellular:
+                    toastMessage = "Connected over Cellular"
+                case .disconnected:
+                    toastMessage = "No internet connection"
+            }
+            showToast = true
+        }
+        .task {
+            do {
+                try await viewModel.fetchCharacters(index: index)
+            } catch {
+                toastMessage = "Failed to fetch books: \(error)"
+                showToast = true
+            }
+        }
     }
 }

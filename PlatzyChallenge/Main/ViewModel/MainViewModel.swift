@@ -12,7 +12,6 @@ final class ListViewModel: ObservableObject {
     private let networkLayer = NetworkLayer()
     
     func fetchBooks() async throws {
-        let fetchedBooks = await self.networkLayer.getBooks(url: "https://www.anapioficeandfire.com/api/books")
-        self.books = fetchedBooks
+        self.books = await self.networkLayer.getBooks(url: "https://www.anapioficeandfire.com/api/books")
     }
 }
