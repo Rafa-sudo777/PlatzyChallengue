@@ -23,6 +23,7 @@
 		5191D5E32A5D3F8000ADE90A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E22A5D3F8000ADE90A /* DetailView.swift */; };
 		5191D5E52A5D3FCD00ADE90A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */; };
 		5191D5E72A5D3FFF00ADE90A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */; };
+		5191D5E92A5D409000ADE90A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		5191D5E22A5D3F8000ADE90A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				5191D5AE2A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld */,
 				5191D5A92A5D235F00ADE90A /* Preview Content */,
 				5191D5DA2A5D3E9100ADE90A /* ToastView.swift */,
+				5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */,
 			);
 			path = PlatzyChallenge;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */,
+				5191D5E92A5D409000ADE90A /* NetworkMonitor.swift in Sources */,
 				5191D5E32A5D3F8000ADE90A /* DetailView.swift in Sources */,
 				5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */,
 				5191D5E52A5D3FCD00ADE90A /* DetailViewModel.swift in Sources */,
