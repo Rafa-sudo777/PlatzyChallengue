@@ -7,6 +7,7 @@
 
 import Foundation
 @MainActor
+
 final class DetailViewModel: ObservableObject  {
     @Published var character: String?
     let networkLayer = NetworkLayer()

@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 struct DetailView: View {
-    @State var viewModel = DetailViewModel()
+    @ObservedObject var viewModel = DetailViewModel()
     @State private var showToast = false
     @EnvironmentObject var networkMonitor: NetworkMonitor
     @State private var toastMessage = ""
