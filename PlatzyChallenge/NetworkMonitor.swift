@@ -16,22 +16,21 @@ enum NetworkStatus {
 
 final class NetworkMonitor: ObservableObject {
     private let monitor: NWPathMonitor
-    private let queue: DispatchQueue
-    
     @Published var status: NetworkStatus
     
     init() {
         self.monitor = NWPathMonitor()
-        self.queue = DispatchQueue(label: "NetworkMonitor")
         self.status = .disconnected
         
         self.monitor.pathUpdateHandler = { path in
             DispatchQueue.main.async {
                 if path.status == .satisfied {
-                    if path.usesInterfaceType(.wifi) {
-                        self.status = .wifi
-                    } else if path.usesInterfaceType(.cellular) {
+                    if path.isExpensive {
                         self.status = .cellular
+                    } else if path.usesInterfaceType(.wifi) {
+                        self.status = .wifi
+                    } else {
+                        self.status = .disconnected
                     }
                 } else {
                     self.status = .disconnected
@@ -39,6 +38,6 @@ final class NetworkMonitor: ObservableObject {
             }
         }
         
-        self.monitor.start(queue: self.queue)
+        self.monitor.start(queue: .main)
     }
 }
