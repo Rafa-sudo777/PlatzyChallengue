@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct MainView: View {
-    @ObservedObject private var viewModel = ListViewModel()
+    @StateObject private var viewModel = ListViewModel()
     @State private var showToast = false
     @State private var toastMessage = ""
     @EnvironmentObject private var networkMonitor: NetworkMonitor
@@ -18,7 +18,7 @@ struct MainView: View {
         VStack {
             NavigationView {
                 if viewModel.books.isEmpty && networkMonitor.status == .disconnected {
-                    Text("No internet conection.\nPlease conect to network")
+                    Text("No internet conection.\nPlease connect to network")
                 } else {
                     List(Array(viewModel.books.enumerated()), id: \.element.self) { index, book in
                         NavigationLink(destination: DetailView(book: book,
@@ -51,17 +51,24 @@ struct MainView: View {
         .onChange(of: networkMonitor.status) { status in
             switch status {
                 case .wifi:
-                    toastMessage = "Conected over Wifi"
+                    toastMessage = "Connected over Wifi"
                 case .cellular:
-                    toastMessage = "Conected over Cellular"
-            case .disconnected:
+                    toastMessage = "Connected over Cellular"
+                case .disconnected:
                     toastMessage = "No internet connection"
             }
-               showToast = true
+            showToast = true
+        }
+        .task {
+            do {
+                try await viewModel.fetchBooks()
+            } catch {
+                toastMessage = "Failed to fetch books: \(error)"
+                showToast = true
+            }
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

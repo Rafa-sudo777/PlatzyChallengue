@@ -6,18 +6,13 @@
 //
 
 import Foundation
-
+@MainActor
 final class ListViewModel: ObservableObject {
     @Published var books: [BookModel] = []
     private let networkLayer = NetworkLayer()
     
-    init () {
-        fetchBooks()
-    }
-    
-    private func fetchBooks() {
-        Task {
-            books = await networkLayer.getBooks(url: "https://www.anapioficeandfire.com/api/books")
-        }
+    func fetchBooks() async throws {
+        let fetchedBooks = await self.networkLayer.getBooks(url: "https://www.anapioficeandfire.com/api/books")
+        self.books = fetchedBooks
     }
 }
