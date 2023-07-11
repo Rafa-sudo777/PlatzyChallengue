@@ -21,6 +21,7 @@
 		5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5DA2A5D3E9100ADE90A /* ToastView.swift */; };
 		5191D5DD2A5D3EDF00ADE90A /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */; };
 		5191D5E32A5D3F8000ADE90A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E22A5D3F8000ADE90A /* DetailView.swift */; };
+		5191D5E52A5D3FCD00ADE90A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5191D5DA2A5D3E9100ADE90A /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		5191D5E22A5D3F8000ADE90A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		5191D5E02A5D3F6400ADE90A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */,
 				5191D5E32A5D3F8000ADE90A /* DetailView.swift in Sources */,
 				5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */,
+				5191D5E52A5D3FCD00ADE90A /* DetailViewModel.swift in Sources */,
 				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
 				5191D5DD2A5D3EDF00ADE90A /* NetworkLayer.swift in Sources */,
