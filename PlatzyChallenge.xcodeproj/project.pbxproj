@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5A32A5D235F00ADE90A /* PlatzyChallengeApp.swift */; };
-		5191D5A62A5D235F00ADE90A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5A52A5D235F00ADE90A /* ContentView.swift */; };
+		5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5A52A5D235F00ADE90A /* MainView.swift */; };
 		5191D5A82A5D235F00ADE90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5191D5A72A5D235F00ADE90A /* Assets.xcassets */; };
 		5191D5AB2A5D235F00ADE90A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5191D5AA2A5D235F00ADE90A /* Preview Assets.xcassets */; };
 		5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5AC2A5D235F00ADE90A /* Persistence.swift */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5191D5A02A5D235F00ADE90A /* PlatzyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatzyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D5A32A5D235F00ADE90A /* PlatzyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeApp.swift; sourceTree = "<group>"; };
-		5191D5A52A5D235F00ADE90A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5191D5A52A5D235F00ADE90A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5191D5A72A5D235F00ADE90A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5191D5AA2A5D235F00ADE90A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5191D5AC2A5D235F00ADE90A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5191D5A32A5D235F00ADE90A /* PlatzyChallengeApp.swift */,
-				5191D5A52A5D235F00ADE90A /* ContentView.swift */,
+				5191D5A52A5D235F00ADE90A /* MainView.swift */,
 				5191D5A72A5D235F00ADE90A /* Assets.xcassets */,
 				5191D5AC2A5D235F00ADE90A /* Persistence.swift */,
 				5191D5AE2A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld */,
@@ -264,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
-				5191D5A62A5D235F00ADE90A /* ContentView.swift in Sources */,
+				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
 				5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */,
 				5191D5B02A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld in Sources */,
 			);
