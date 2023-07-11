@@ -23,67 +23,79 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            Text(book.name)
-                .font(.largeTitle)
-                .bold()
-            VideoPlayer(player: .init(url: URL(string: "https://cloudinary-marketing-res.cloudinary.com/video/upload/e_preview:duration_15:max_seg_9:min_seg_dur_1/q_auto/f_auto/surfing_travel.mp4")!))
-                .frame(width: 355,
-                       height: 200,
-                       alignment: .center)
-            Form {
-                if let character = viewModel.character, !character.isEmpty {
+            if viewModel.character == nil && networkMonitor.status == .disconnected {
+                Text("No internet conection.\nPlease connect to network")
+            } else {
+                Text(book.name)
+                    .font(.largeTitle)
+                    .bold()
+                VideoPlayer(player: .init(url: URL(string: "https://cloudinary-marketing-res.cloudinary.com/video/upload/e_preview:duration_15:max_seg_9:min_seg_dur_1/q_auto/f_auto/surfing_travel.mp4")!))
+                    .frame(width: 355,
+                           height: 200,
+                           alignment: .center)
+                Form {
+                    if let character = viewModel.character, !character.isEmpty {
+                        Section(header:
+                                    Text("Character")
+                            .bold()
+                        ) {
+                            Text(character)
+                        }
+                    }
                     Section(header:
-                                Text("Character")
+                                Text("General Info")
                         .bold()
                     ) {
-                        Text(character)
-                    }
-                }
-                Section(header:
-                            Text("General Info")
-                    .bold()
-                ) {
-                    Group {
-                        HStack {
-                            Text("Country:")
-                            Spacer()
-                            Text("\(book.country.rawValue)")
-                                .foregroundColor(.gray)
-                        }
-                        HStack {
-                            Text("Total pages:")
-                            Spacer()
-                            Text("\(book.numberOfPages)")
-                                .foregroundColor(.gray)
-                        }
-                        HStack {
-                            Text("Publisher:")
-                            Spacer()
-                            Text("\(book.publisher)")
-                                .foregroundColor(.gray)
-                        }
-                        HStack {
-                            Text("Media type:")
-                            Spacer()
-                            Text("\(book.mediaType)")
-                                .foregroundColor(.gray)
-                        }
-                        if let dateFormat = book.released.convertToDate() {
+                        Group {
                             HStack {
-                                Text("Release Date:")
+                                Text("Country:")
                                 Spacer()
-                                Text(dateFormat)
+                                Text("\(book.country.rawValue)")
                                     .foregroundColor(.gray)
+                            }
+                            HStack {
+                                Text("Total pages:")
+                                Spacer()
+                                Text("\(book.numberOfPages)")
+                                    .foregroundColor(.gray)
+                            }
+                            HStack {
+                                Text("Publisher:")
+                                Spacer()
+                                Text("\(book.publisher)")
+                                    .foregroundColor(.gray)
+                            }
+                            HStack {
+                                Text("Media type:")
+                                Spacer()
+                                Text("\(book.mediaType)")
+                                    .foregroundColor(.gray)
+                            }
+                            if let dateFormat = book.released.convertToDate() {
+                                HStack {
+                                    Text("Release Date:")
+                                    Spacer()
+                                    Text(dateFormat)
+                                        .foregroundColor(.gray)
+                                }
                             }
                         }
                     }
+                    Section(header:
+                                Text("Authors")
+                        .bold()
+                    ) {
+                        ForEach(book.authors, id: \.self) { author in
+                            Text(author.rawValue)
+                        }
+                    }
                 }
-                Section(header:
-                            Text("Authors")
-                    .bold()
-                ) {
-                    ForEach(book.authors, id: \.self) { author in
-                        Text(author.rawValue)
+                .task {
+                    do {
+                        try await viewModel.fetchCharacters(index: index)
+                    } catch {
+                        toastMessage = "Failed to fetch books: \(error)"
+                        showToast = true
                     }
                 }
             }
@@ -101,14 +113,6 @@ struct DetailView: View {
                     toastMessage = "No internet connection"
             }
             showToast = true
-        }
-        .task {
-            do {
-                try await viewModel.fetchCharacters(index: index)
-            } catch {
-                toastMessage = "Failed to fetch books: \(error)"
-                showToast = true
-            }
         }
     }
 }
