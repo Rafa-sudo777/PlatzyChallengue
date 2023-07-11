@@ -13,6 +13,6 @@ final class DetailViewModel: ObservableObject  {
     let networkLayer = NetworkLayer()
     
     func fetchCharacters(index: String) async throws {
-        self.character = await networkLayer.getCharacters(url: "https://www.anapioficeandfire.com/api/characters/" + index) .name
+        character = await networkLayer.getCharacters(url: "https://www.anapioficeandfire.com/api/characters/" + index).name
     }
 }
