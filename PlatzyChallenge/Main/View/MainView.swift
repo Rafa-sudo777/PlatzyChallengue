@@ -42,6 +42,14 @@ struct MainView: View {
                         }
                     }
                     .navigationTitle("Books")
+                    .task {
+                        do {
+                            try await viewModel.fetchBooks()
+                        } catch {
+                            toastMessage = "Failed to fetch books: \(error)"
+                            showToast = true
+                        }
+                    }
                 }
             }
         }
@@ -58,14 +66,6 @@ struct MainView: View {
                     toastMessage = "No internet connection"
             }
             showToast = true
-        }
-        .task {
-            do {
-                try await viewModel.fetchBooks()
-            } catch {
-                toastMessage = "Failed to fetch books: \(error)"
-                showToast = true
-            }
         }
     }
 }
