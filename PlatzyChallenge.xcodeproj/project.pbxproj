@@ -16,6 +16,7 @@
 		5191D5BA2A5D235F00ADE90A /* PlatzyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5B92A5D235F00ADE90A /* PlatzyChallengeTests.swift */; };
 		5191D5C42A5D236000ADE90A /* PlatzyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5C32A5D236000ADE90A /* PlatzyChallengeUITests.swift */; };
 		5191D5C62A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */; };
+		5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5191D5BF2A5D236000ADE90A /* PlatzyChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatzyChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D5C32A5D236000ADE90A /* PlatzyChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeUITests.swift; sourceTree = "<group>"; };
 		5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		5191D5D42A5D3D8200ADE90A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
 				5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */,
