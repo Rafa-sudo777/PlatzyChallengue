@@ -125,6 +125,7 @@
 				5191D5AE2A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld */,
 				5191D5A92A5D235F00ADE90A /* Preview Content */,
 				5191D5DA2A5D3E9100ADE90A /* ToastView.swift */,
+				5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */,
 				5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */,
 			);
 			path = PlatzyChallenge;
@@ -161,7 +162,6 @@
 				5191D5D52A5D3D8D00ADE90A /* Model */,
 				5191D5D42A5D3D8200ADE90A /* ViewModel */,
 				5191D5D32A5D3D7C00ADE90A /* View */,
-				5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
