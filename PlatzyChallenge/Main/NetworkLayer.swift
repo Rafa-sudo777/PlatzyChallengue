@@ -17,19 +17,19 @@ final class NetworkLayer {
         return booksModel
     }
     
-    func getCharacters(url: String) async -> Character {
+    func getCharacters(url: String) async -> CharacterModel {
         guard let url = URL(string: url) else {
-            return Character(name: String(),
-                             gender: String(),
-                             culture: String(),
-                             born: String())
+            return CharacterModel(name: String(),
+                                  gender: String(),
+                                  culture: String(),
+                                  born: String())
         }
         let (data, _) = try! await URLSession.shared.data(from: url)
-        guard let authors = try? JSONDecoder().decode(Character.self, from: data) else {
-            return Character(name: String(),
-                             gender: String(),
-                             culture: String(),
-                             born: String())
+        guard let authors = try? JSONDecoder().decode(CharacterModel.self, from: data) else {
+            return CharacterModel(name: String(),
+                                  gender: String(),
+                                  culture: String(),
+                                  born: String())
         }
         return authors
     }

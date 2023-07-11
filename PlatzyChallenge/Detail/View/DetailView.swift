@@ -11,10 +11,10 @@ import AVKit
 struct DetailView: View {
     @ObservedObject var viewModel = DetailViewModel()
     @EnvironmentObject var networkMonitor: NetworkMonitor
-    private var book: Book!
+    private var book: BookModel!
     private var index = String()
     
-    init (book: Book, index: Int) {
+    init (book: BookModel, index: Int) {
         self.book = book
         self.index = String(index + 1)
     }
