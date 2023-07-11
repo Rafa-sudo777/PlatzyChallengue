@@ -10,12 +10,10 @@ import SwiftUI
 @main
 struct PlatzyChallengeApp: App {
     @StateObject private var networkMonitor = NetworkMonitor()
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(networkMonitor)
         }
     }
