@@ -24,6 +24,7 @@
 		5191D5E52A5D3FCD00ADE90A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */; };
 		5191D5E72A5D3FFF00ADE90A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */; };
 		5191D5E92A5D409000ADE90A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */; };
+		5191D5EC2A5D40F000ADE90A /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5EB2A5D40F000ADE90A /* Date+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		5191D5E42A5D3FCD00ADE90A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		5191D5EB2A5D40F000ADE90A /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		5191D5A22A5D235F00ADE90A /* PlatzyChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5191D5EA2A5D40D800ADE90A /* Extensions */,
 				5191D5DE2A5D3F5900ADE90A /* Detail */,
 				5191D5D22A5D3D7300ADE90A /* Main */,
 				5191D5A32A5D235F00ADE90A /* PlatzyChallengeApp.swift */,
@@ -219,6 +222,14 @@
 				5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5191D5EA2A5D40D800ADE90A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5191D5EB2A5D40F000ADE90A /* Date+Format.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
 				5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */,
 				5191D5B02A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld in Sources */,
+				5191D5EC2A5D40F000ADE90A /* Date+Format.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
