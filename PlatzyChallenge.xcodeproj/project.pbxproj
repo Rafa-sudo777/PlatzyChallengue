@@ -17,6 +17,7 @@
 		5191D5C42A5D236000ADE90A /* PlatzyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5C32A5D236000ADE90A /* PlatzyChallengeUITests.swift */; };
 		5191D5C62A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */; };
 		5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */; };
+		5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D82A5D3DF500ADE90A /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		5191D5C32A5D236000ADE90A /* PlatzyChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeUITests.swift; sourceTree = "<group>"; };
 		5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5191D5D82A5D3DF500ADE90A /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		5191D5D52A5D3D8D00ADE90A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5191D5D82A5D3DF500ADE90A /* BookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */,
 				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
