@@ -25,6 +25,7 @@
 		5191D5E72A5D3FFF00ADE90A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */; };
 		5191D5E92A5D409000ADE90A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */; };
 		5191D5EC2A5D40F000ADE90A /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5EB2A5D40F000ADE90A /* Date+Format.swift */; };
+		5191D5F22A5DF9A500ADE90A /* View+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5F12A5DF9A500ADE90A /* View+Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		5191D5E62A5D3FFF00ADE90A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		5191D5EB2A5D40F000ADE90A /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		5191D5F12A5DF9A500ADE90A /* View+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Toast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				5191D5EB2A5D40F000ADE90A /* Date+Format.swift */,
+				5191D5F12A5DF9A500ADE90A /* View+Toast.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				5191D5E72A5D3FFF00ADE90A /* CharacterModel.swift in Sources */,
 				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
+				5191D5F22A5DF9A500ADE90A /* View+Toast.swift in Sources */,
 				5191D5DD2A5D3EDF00ADE90A /* NetworkLayer.swift in Sources */,
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
 				5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */,
