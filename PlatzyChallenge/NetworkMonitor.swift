@@ -25,10 +25,8 @@ final class NetworkMonitor: ObservableObject {
         self.monitor.pathUpdateHandler = { path in
             DispatchQueue.main.async {
                 if path.status == .satisfied {
-                    if path.isExpensive {
-                        self.status = .cellular
-                    } else if path.usesInterfaceType(.wifi) {
-                        self.status = .wifi
+                    if path.usesInterfaceType(.cellular) || path.usesInterfaceType(.wifi) {
+                        self.status = path.usesInterfaceType(.cellular) ? .cellular : .wifi
                     } else {
                         self.status = .disconnected
                     }
