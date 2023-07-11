@@ -31,7 +31,7 @@ final class ListViewModel: ObservableObject {
 
         await context.perform {
             self.books.forEach { bookModel in
-                _ = bookModel.toCoreDataBook(context: context)
+                bookModel.toCoreDataBook(context: context)
             }
             do {
                 try context.save()
@@ -39,20 +39,5 @@ final class ListViewModel: ObservableObject {
                 print("Error saving to Core Data: \(error)")
             }
         }
-    }
-}
-
-extension BookModel {
-    func toCoreDataBook(context: NSManagedObjectContext) -> BookEntity {
-        let book = BookEntity(context: context)
-        book.name = name
-        book.numberOfPages = Int16(numberOfPages)
-        book.publisher = publisher
-        book.countrys = NSSet(array: authors.map { $0 })
-        book.mediaType = mediaType
-        book.released = released
-        book.authors = NSSet(array: authors.map { $0 })
-        book.characters = NSSet(array: characters.map { $0 })
-        return book
     }
 }

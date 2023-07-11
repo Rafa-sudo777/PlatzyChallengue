@@ -5,6 +5,8 @@
 //  Created by Rafael Aviles Puebla on 11/07/23.
 //
 
+import CoreData
+
 struct BookModel: Codable, Hashable {
     let name: String
     let authors: [AuthorModel]
@@ -43,6 +45,19 @@ struct BookModel: Codable, Hashable {
             characters = []
         }
     }
+    
+    func toCoreDataBook(context: NSManagedObjectContext) {
+        let book = BookEntity(context: context)
+        book.name = name
+        book.numberOfPages = Int16(numberOfPages)
+        book.publisher = publisher
+        book.countrys = NSSet(array: authors.map { $0 })
+        book.mediaType = mediaType
+        book.released = released
+        book.authors = NSSet(array: authors.map { $0 })
+        book.characters = NSSet(array: characters.map { $0 })
+    }
+
 }
 
 enum AuthorModel: String, Codable {
