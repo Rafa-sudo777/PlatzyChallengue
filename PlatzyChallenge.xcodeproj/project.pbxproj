@@ -19,6 +19,7 @@
 		5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */; };
 		5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D82A5D3DF500ADE90A /* BookModel.swift */; };
 		5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5DA2A5D3E9100ADE90A /* ToastView.swift */; };
+		5191D5DD2A5D3EDF00ADE90A /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5191D5D82A5D3DF500ADE90A /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		5191D5DA2A5D3E9100ADE90A /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				5191D5D52A5D3D8D00ADE90A /* Model */,
 				5191D5D42A5D3D8200ADE90A /* ViewModel */,
 				5191D5D32A5D3D7C00ADE90A /* View */,
+				5191D5DC2A5D3EDF00ADE90A /* NetworkLayer.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */,
 				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
+				5191D5DD2A5D3EDF00ADE90A /* NetworkLayer.swift in Sources */,
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
 				5191D5A42A5D235F00ADE90A /* PlatzyChallengeApp.swift in Sources */,
 				5191D5B02A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld in Sources */,
