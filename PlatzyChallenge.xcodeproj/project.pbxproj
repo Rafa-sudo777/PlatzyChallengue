@@ -18,6 +18,7 @@
 		5191D5C62A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */; };
 		5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */; };
 		5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5D82A5D3DF500ADE90A /* BookModel.swift */; };
+		5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5DA2A5D3E9100ADE90A /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5191D5C52A5D236000ADE90A /* PlatzyChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatzyChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5191D5D62A5D3DB400ADE90A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5191D5D82A5D3DF500ADE90A /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		5191D5DA2A5D3E9100ADE90A /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				5191D5AC2A5D235F00ADE90A /* Persistence.swift */,
 				5191D5AE2A5D235F00ADE90A /* PlatzyChallenge.xcdatamodeld */,
 				5191D5A92A5D235F00ADE90A /* Preview Content */,
+				5191D5DA2A5D3E9100ADE90A /* ToastView.swift */,
 			);
 			path = PlatzyChallenge;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5191D5D92A5D3DF500ADE90A /* BookModel.swift in Sources */,
+				5191D5DB2A5D3E9100ADE90A /* ToastView.swift in Sources */,
 				5191D5D72A5D3DB400ADE90A /* MainViewModel.swift in Sources */,
 				5191D5AD2A5D235F00ADE90A /* Persistence.swift in Sources */,
 				5191D5A62A5D235F00ADE90A /* MainView.swift in Sources */,
