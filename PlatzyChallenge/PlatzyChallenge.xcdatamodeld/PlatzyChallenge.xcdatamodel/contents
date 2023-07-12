@@ -4,6 +4,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="BookEntity" representedClassName="BookEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="mediaType" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="numberOfPages" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -11,12 +12,8 @@
         <attribute name="released" optional="YES" attributeType="String"/>
         <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author"/>
         <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character"/>
-        <relationship name="countrys" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country"/>
     </entity>
     <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
 </model>
