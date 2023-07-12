@@ -42,7 +42,7 @@ final class PlatzyChallengeTests: XCTestCase {
         
         let sut = ListViewModel(books: [], retreiveBooks: retreiveBooksStub)
         
-        //assertMemoryLeak(instance: sut, file: file, line: line)
+        assertMemoryLeak(instance: sut, file: file, line: line)
         
         return (sut, retreiveBooksStub)
     }

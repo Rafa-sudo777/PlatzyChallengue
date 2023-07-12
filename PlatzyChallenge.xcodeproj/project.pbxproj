@@ -26,6 +26,7 @@
 		5191D5E92A5D409000ADE90A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */; };
 		5191D5EC2A5D40F000ADE90A /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5EB2A5D40F000ADE90A /* Date+Format.swift */; };
 		5191D5F22A5DF9A500ADE90A /* View+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5F12A5DF9A500ADE90A /* View+Toast.swift */; };
+		5191D5F52A5E31E000ADE90A /* XCTestCase+AssertMemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D5F32A5E31D500ADE90A /* XCTestCase+AssertMemoryLeaks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		5191D5E82A5D409000ADE90A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		5191D5EB2A5D40F000ADE90A /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		5191D5F12A5DF9A500ADE90A /* View+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Toast.swift"; sourceTree = "<group>"; };
+		5191D5F32A5E31D500ADE90A /* XCTestCase+AssertMemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertMemoryLeaks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		5191D5B82A5D235F00ADE90A /* PlatzyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				5191D5F62A5E31F100ADE90A /* Extensions */,
 				5191D5B92A5D235F00ADE90A /* PlatzyChallengeTests.swift */,
 			);
 			path = PlatzyChallengeTests;
@@ -231,6 +234,14 @@
 			children = (
 				5191D5EB2A5D40F000ADE90A /* Date+Format.swift */,
 				5191D5F12A5DF9A500ADE90A /* View+Toast.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5191D5F62A5E31F100ADE90A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5191D5F32A5E31D500ADE90A /* XCTestCase+AssertMemoryLeaks.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5191D5F52A5E31E000ADE90A /* XCTestCase+AssertMemoryLeaks.swift in Sources */,
 				5191D5BA2A5D235F00ADE90A /* PlatzyChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
