@@ -9,7 +9,8 @@ import SwiftUI
 import CoreData
 
 struct MainView: View {
-    @StateObject private var viewModel = ListViewModel()
+    @StateObject private var viewModel = ListViewModel(books: [],
+                                                       retreiveBooks: NetworkLayer())
     @State private var showToast = false
     @State private var toastMessage = ""
     @EnvironmentObject private var networkMonitor: NetworkMonitor

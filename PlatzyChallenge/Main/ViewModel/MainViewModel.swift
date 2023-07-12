@@ -8,10 +8,19 @@
 import CoreData
 import Foundation
 
+protocol RetreiveBooks {
+    func getBooks(url: String) async -> [BookModel]
+}
+
 @MainActor
 final class ListViewModel: ObservableObject {
     @Published var books: [BookModel] = []
-    private let networkLayer = NetworkLayer()
+    private let retreiveBooks: RetreiveBooks!
+    
+    init(books: [BookModel], retreiveBooks: RetreiveBooks!) {
+        self.books = books
+        self.retreiveBooks = retreiveBooks
+    }
     
     func fetchBooks() async throws {
         let context = PersistenceController.shared.container.viewContext
@@ -27,7 +36,7 @@ final class ListViewModel: ObservableObject {
             print("Error fetching from Core Data: \(error)")
         }
 
-        self.books = await self.networkLayer.getBooks(url: "https://www.anapioficeandfire.com/api/books")
+        books = await self.retreiveBooks.getBooks(url: "https://www.anapioficeandfire.com/api/books")
 
         await context.perform {
             self.books.forEach { bookModel in

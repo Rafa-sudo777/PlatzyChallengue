@@ -32,5 +32,26 @@ final class PlatzyChallengeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    @MainActor private func makeSut(date: Date? = Date(),
+                                    file: StaticString = #file,
+                                    line: UInt = #line) -> (sut: ListViewModel,
+                                                            retreiveBooksStub: RetreiveBooksStub) {
+        
+        let retreiveBooksStub = RetreiveBooksStub()
+        
+        let sut = ListViewModel(books: [], retreiveBooks: retreiveBooksStub)
+        
+        //assertMemoryLeak(instance: sut, file: file, line: line)
+        
+        return (sut, retreiveBooksStub)
+    }
 
+}
+
+final class RetreiveBooksStub: RetreiveBooks {
+    var books: [BookModel] = []
+    func getBooks(url: String) async -> [BookModel] {
+        books
+    }
 }

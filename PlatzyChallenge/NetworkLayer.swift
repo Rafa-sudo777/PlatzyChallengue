@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NetworkLayer {
+final class NetworkLayer: RetreiveBooks {
     var books: [BookModel] = []
     
     func getBooks(url: String) async -> [BookModel] {
